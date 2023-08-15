@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1f75161a0246f9b7b9ea847d3ddeed, type: 3}
+  m_Name: SpawnData
+  m_EditorClassIdentifier: 
+  Cooldown: 3
+  Obstacles:
+  - ID: 1
+    Prefab: {fileID: 1299727400902985642, guid: 11c98064d79d8594498e1f3d3cc99edb, type: 3}
+  - ID: 2
+    Prefab: {fileID: 1299727400902985642, guid: fddc01a3614948a41be607ee37444143, type: 3}

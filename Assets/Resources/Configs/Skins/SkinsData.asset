@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756e75fcd7844071aba41fd5e31d8278, type: 3}
+  m_Name: SkinsData
+  m_EditorClassIdentifier: 
+  Skins:
+  - SkinType: 0
+    Skin: {fileID: 21300000, guid: 0b35dc61897cd5841a1a4d332b665969, type: 3}
+    CurrencyID: 0
+    Price: 0
+  - SkinType: 1
+    Skin: {fileID: 21300000, guid: edf814d87195e51488b03b04b3c54d5c, type: 3}
+    CurrencyID: 0
+    Price: 40
+  - SkinType: 2
+    Skin: {fileID: 21300000, guid: ca8a26b5770016949b63abd483294fe4, type: 3}
+    CurrencyID: 0
+    Price: 15
+  - SkinType: 3
+    Skin: {fileID: 21300000, guid: 85b79feec18e8cb4cbc94255f43bd861, type: 3}
+    CurrencyID: 0
+    Price: 30
+  - SkinType: 4
+    Skin: {fileID: 21300000, guid: 0304552a2a3268247a90fd8fe2ccd408, type: 3}
+    CurrencyID: 0
+    Price: 45
+  - SkinType: 5
+    Skin: {fileID: 21300000, guid: 563982c5f37af5b47bccf6f004832e47, type: 3}
+    CurrencyID: 0
+    Price: 10
+  - SkinType: 6
+    Skin: {fileID: 21300000, guid: d4fe7766b27f94c40b4ce33050475d5e, type: 3}
+    CurrencyID: 1
+    Price: 10
+  - SkinType: 7
+    Skin: {fileID: 21300000, guid: 4f839a0e999e4524194aac3d3f8b793b, type: 3}
+    CurrencyID: 1
+    Price: 15
+  - SkinType: 8
+    Skin: {fileID: 21300000, guid: 6fcf8ca08573c8f4c8e6b2072e67f44b, type: 3}
+    CurrencyID: 1
+    Price: 30
