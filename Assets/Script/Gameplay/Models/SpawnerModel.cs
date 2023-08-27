@@ -17,6 +17,8 @@ namespace Script.Gameplay
         private float _cooldown = 0f;
         private SpawnData _spawnData;
 
+        public float IncrementCD { get; set; }
+
         [Inject]
         public void Construct(StaticDataService staticDataService)
         {
@@ -25,6 +27,7 @@ namespace Script.Gameplay
 
         public void Initialize(Transform spawnPoint)
         {
+            IncrementCD = 0;
             _spawnPoint = spawnPoint;
             _spawnData = _staticDataService.SpawnData;
         }
@@ -57,7 +60,9 @@ namespace Script.Gameplay
                 prefab.GetComponent<ObstacleController>().OnDestroy += DestroyObs;
                 _obstacles.Add(prefab, currObj.ID);
 
-                _cooldown = _spawnData.Cooldown;
+                if (IncrementCD > 1.5f) IncrementCD = 1.5f;
+
+                _cooldown = _spawnData.Cooldown - IncrementCD;
             }
         }
 
@@ -68,6 +73,7 @@ namespace Script.Gameplay
                 GameObject.Destroy(key);
             }
             _obstacles.Clear();
+            IncrementCD = 0;
         }
 
         private void DestroyObs(GameObject gameObj)

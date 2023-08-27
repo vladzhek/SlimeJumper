@@ -24,6 +24,7 @@ namespace Script.Gameplay
         private PlayerController _playerController;
         private ProgressService _progressService;
         private ShopModel _shopModel;
+        private SpawnerModel _spawnerModel;
         
         private Vector3 _spawnPos;
 
@@ -31,6 +32,7 @@ namespace Script.Gameplay
             PlayerJump playerJump, 
             ShopModel shopModel, 
             ProgressService progressService, 
+            SpawnerModel spawnerModel,
             CurrencyModel currencyModel)
         {
             _staticDataService = staticDataService;
@@ -38,6 +40,7 @@ namespace Script.Gameplay
             _currencyModel = currencyModel;
             _progressService = progressService;
             _shopModel = shopModel;
+            _spawnerModel = spawnerModel;
             Subscribe();
         }
 
@@ -87,8 +90,8 @@ namespace Script.Gameplay
                 case BonusType.Coin:
                     _currencyModel.AddCurrency(CurrencyType.Soft, 1);
                     break;
-                case BonusType.Shield:
-                    
+                case BonusType.HardCoin:
+                    _currencyModel.AddCurrency(CurrencyType.Hard, 1);
                     break;
                 default:
                     Debug.LogWarning("[PlayerModel] CollisionBonus() => switch"); break;
@@ -99,6 +102,7 @@ namespace Script.Gameplay
         {
             TotalScore++;
             OnScoreUpdate?.Invoke(TotalScore);
+            _spawnerModel.IncrementCD += 0.2f;
         }
 
         private void CollisionDeath()

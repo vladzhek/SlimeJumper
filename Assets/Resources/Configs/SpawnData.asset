@@ -12,9 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1f75161a0246f9b7b9ea847d3ddeed, type: 3}
   m_Name: SpawnData
   m_EditorClassIdentifier: 
-  Cooldown: 3
+  Cooldown: 2.5
   Obstacles:
   - ID: 1
     Prefab: {fileID: 1299727400902985642, guid: 11c98064d79d8594498e1f3d3cc99edb, type: 3}
   - ID: 2
+    Prefab: {fileID: 1299727400902985642, guid: d8b8fedd609ecef46a76759eff39aad1, type: 3}
+  - ID: 3
     Prefab: {fileID: 1299727400902985642, guid: fddc01a3614948a41be607ee37444143, type: 3}
+  - ID: 4
+    Prefab: {fileID: 1299727400902985642, guid: f098d4c1fc866f146b586b6afec98a0b, type: 3}
+  - ID: 5
+    Prefab: {fileID: 1299727400902985642, guid: dfbf79702d78a0544952488c92c275cd, type: 3}
+  - ID: 6
+    Prefab: {fileID: 1299727400902985642, guid: b38ef98d27439294ea69869a76dca145, type: 3}
+  - ID: 7
+    Prefab: {fileID: 1299727400902985642, guid: d2f401916968480449df423e7c588d4f, type: 3}
+  - ID: 8
+    Prefab: {fileID: 1299727400902985642, guid: d1019b94f37b6624ab8902048ddaf80d, type: 3}
+  - ID: 9
+    Prefab: {fileID: 1299727400902985642, guid: f9fead3770b8f43419b361078a04e8d9, type: 3}
+  - ID: 10
+    Prefab: {fileID: 1299727400902985642, guid: 379973a3478342b44a5d26d96ac92504, type: 3}

@@ -3,6 +3,6 @@
     public enum BonusType
     {
         Coin,
-        Shield,
+        HardCoin,
     }
 }

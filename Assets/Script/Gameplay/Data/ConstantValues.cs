@@ -11,7 +11,7 @@
         
         // Float's
         public const float MIN_JUMP_FORCE_PLAYER = 6.0f;
-        public const float MAX_JUMP_FORCE_PLAYER = 12.5f;
+        public const float MAX_JUMP_FORCE_PLAYER = 15.5f;
         public const float PLATFORM_START_SPEED = 4f;
     }
 }

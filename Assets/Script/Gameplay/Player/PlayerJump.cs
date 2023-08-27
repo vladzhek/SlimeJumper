@@ -27,7 +27,7 @@ namespace Script.Gameplay.Player
             _jumpForceIncrement = 0.1f; // Инкремент увеличения силы прыжка
             _jumpForce = Values.MIN_JUMP_FORCE_PLAYER;
             _isIncreasingForce = true;
-            _forceChangeSpeed = 100.0f;
+            _forceChangeSpeed = 150.0f;
         }
 
         public void StartJump()
