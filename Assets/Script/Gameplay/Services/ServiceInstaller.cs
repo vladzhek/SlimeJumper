@@ -39,6 +39,7 @@ public class ServiceInstaller : MonoInstaller
         Container.Bind<ProgressService>().AsSingle();
         Container.Bind<AudioService>().AsSingle();
         Container.Bind<InjectService>().AsSingle();
+        Container.Bind<AdsService>().AsSingle();
     }
 
     private void BindPrefabs()
