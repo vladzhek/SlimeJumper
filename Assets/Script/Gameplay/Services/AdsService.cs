@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using YG;
 using Zenject;
 
 namespace Script.Gameplay.Services
@@ -15,17 +16,23 @@ namespace Script.Gameplay.Services
 
         public void Initialize()
         {
-            YandexSDK.YaSDK.onRewardedAdReward += UserGotReward;
+            YandexGame.RewardVideoEvent += UserGotReward;
+        }
+        
+        public void ShowFullScreenBanner()
+        {
+            YandexGame.FullscreenShow();
         }
 
         public void ShowReward()
         {
-            YandexSDK.YaSDK.instance.ShowRewarded("hard");
+            YandexGame.RewVideoShow(0);
         }
 
-        private void UserGotReward(string reward)
+        private void UserGotReward(int id_reward)
         {
-            Debug.Log("GET REWARD");
+            Debug.Log("REWARDED +5");
+            _currencyModel.AddCurrency(CurrencyType.Hard, 5);
         }
     }
 }

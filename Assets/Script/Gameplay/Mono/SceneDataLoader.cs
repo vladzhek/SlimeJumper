@@ -7,6 +7,7 @@ using Script.Gameplay.Progress;
 using Script.Gameplay.Services;
 using Script.Gameplay.View;
 using UnityEngine;
+using YG;
 using Zenject;
 
 public class SceneDataLoader : MonoBehaviour
@@ -27,6 +28,7 @@ public class SceneDataLoader : MonoBehaviour
     private SettingModel _settingModel;
     private AchievementModel _achievementModel;
     private AudioService _audioService;
+    private AdsService _adsService;
 
     [Inject]
     public void Construct(SpawnerModel spawnerModel,
@@ -39,6 +41,7 @@ public class SceneDataLoader : MonoBehaviour
         SettingModel settingModel,
         AchievementModel achievementModel,
         AudioService audioService,
+        AdsService adsService,
         PlayerModel playerModel)
     {
         _playerModel = playerModel;
@@ -52,6 +55,7 @@ public class SceneDataLoader : MonoBehaviour
         _settingModel = settingModel;
         _audioService = audioService;
         _achievementModel = achievementModel;
+        _adsService = adsService;
     }
     
     //--- Enter game
@@ -63,14 +67,15 @@ public class SceneDataLoader : MonoBehaviour
         _uiManager.Load();
         
         // TODO: Бабосы позже удалить
-        _currencyModel.AddCurrency(CurrencyType.Soft, 200);
-        _currencyModel.AddCurrency(CurrencyType.Hard, 200);
+        //_currencyModel.AddCurrency(CurrencyType.Soft, 200);
+        //_currencyModel.AddCurrency(CurrencyType.Hard, 200);
 
         _shopModel.Initialize();
         _playerModel.Initialize(_playerPositon.position);
         _spawnerModel.Initialize(_spawnPostion);
         _achievementModel.Initialize();
         _audioService.Initialize(_staticDataService, _sfx, _music);
+        _adsService.Initialize();
         Subscribe();
     }
     
@@ -84,7 +89,6 @@ public class SceneDataLoader : MonoBehaviour
 
     private void Subscribe()
     {
-        //TODO: Добавить состояний игры - Экран смерти
         _uiManager.OnReload += ReloadGame;
         _playerModel.OnDeath += Death;
     }
@@ -99,6 +103,7 @@ public class SceneDataLoader : MonoBehaviour
         _playerModel.ReloadPlayer();
         _spawnerModel.ClearObstacle();
         _spawnerModel.SetSpawnStatus(false);
+        _adsService.ShowFullScreenBanner();
     }
 
     //--- Gameplay

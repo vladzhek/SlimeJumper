@@ -1,0 +1,134 @@
+{
+    "idSave": 10,
+    "isFirstSession": false,
+    "language": "ru",
+    "promptDone": false,
+    "PlayerProgress": {
+        "CurrencyProgress": [
+            {
+                "Type": 0,
+                "Amount": 401
+            },
+            {
+                "Type": 1,
+                "Amount": 400
+            },
+            {
+                "Type": 0,
+                "Amount": 594
+            },
+            {
+                "Type": 1,
+                "Amount": 600
+            }
+        ],
+        "ShopDataProgresses": [
+            {
+                "SkinID": 0,
+                "IsBuyed": true,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 1,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 2,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 3,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 4,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 5,
+                "IsBuyed": true,
+                "IsSelected": true
+            },
+            {
+                "SkinID": 6,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 7,
+                "IsBuyed": false,
+                "IsSelected": false
+            },
+            {
+                "SkinID": 8,
+                "IsBuyed": false,
+                "IsSelected": false
+            }
+        ],
+        "AchieveDataProgresses": [
+            {
+                "ID": "1",
+                "Type": 0,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 5
+            },
+            {
+                "ID": "2",
+                "Type": 1,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 10
+            },
+            {
+                "ID": "3",
+                "Type": 2,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 4
+            },
+            {
+                "ID": "4",
+                "Type": 3,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 2
+            },
+            {
+                "ID": "5",
+                "Type": 0,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 5
+            },
+            {
+                "ID": "6",
+                "Type": 1,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 10
+            },
+            {
+                "ID": "7",
+                "Type": 2,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 4
+            },
+            {
+                "ID": "8",
+                "Type": 3,
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 2
+            }
+        ],
+        "BestScore": 2,
+        "SFXVolume": 1.0,
+        "MusicVolume": 1.0
+    }
+}

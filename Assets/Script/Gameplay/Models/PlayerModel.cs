@@ -102,7 +102,7 @@ namespace Script.Gameplay
         {
             TotalScore++;
             OnScoreUpdate?.Invoke(TotalScore);
-            _spawnerModel.IncrementCD += 0.2f;
+            _spawnerModel.IncrementCD += 0.1f;
         }
 
         private void CollisionDeath()

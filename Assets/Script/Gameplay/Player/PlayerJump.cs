@@ -24,7 +24,7 @@ namespace Script.Gameplay.Player
             _isJumping = false;
 
             //TODO: Перенести в ScriptableObject
-            _jumpForceIncrement = 0.1f; // Инкремент увеличения силы прыжка
+            _jumpForceIncrement = 0.1f;
             _jumpForce = Values.MIN_JUMP_FORCE_PLAYER;
             _isIncreasingForce = true;
             _forceChangeSpeed = 150.0f;

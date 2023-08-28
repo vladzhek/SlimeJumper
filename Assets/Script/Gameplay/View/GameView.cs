@@ -11,6 +11,8 @@ public class GameView : MonoBehaviour
 {
     [SerializeField] private TMP_Text _score;
     [SerializeField] private Slider _slider;
+    [SerializeField] private Image _fill;
+    [SerializeField] private Gradient _gradient;
     
     private PlayerModel _playerModel;
     private UIManager _uiManager;
@@ -39,13 +41,15 @@ public class GameView : MonoBehaviour
 
     private void IsTicked(float value)
     {
-        //TODO: Сделать 3 диапазона цветов и применить к slider
         _slider.value = value;
+
+        if(_fill != null)
+            _fill.color = _gradient.Evaluate(value);
     }
 
     public void Reload()
     {
         _score.text = "0";
-        _slider.value = 0f;
+        _slider.value = 0.1f;
     }
 }

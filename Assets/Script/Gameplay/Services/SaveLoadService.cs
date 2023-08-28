@@ -1,5 +1,7 @@
-﻿using Script.Gameplay.Progress;
+﻿using System;
+using Script.Gameplay.Progress;
 using UnityEngine;
+using YG;
 
 namespace Script.Gameplay.Services
 {
@@ -15,14 +17,24 @@ namespace Script.Gameplay.Services
 
         public void SaveProgress()
         {
-            PlayerPrefs.SetString(SavesKey, JsonUtility.ToJson(_progressService.PlayerProgress));
-            Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+            // Mobile device
+            //PlayerPrefs.SetString(SavesKey, JsonUtility.ToJson(_progressService.PlayerProgress));
+            //Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+            
+            // Yandex Games 
+            YandexGame.savesData.PlayerProgress = _progressService.PlayerProgress;
+            YandexGame.SaveProgress();
         }
         
         public void LoadProgress()
         {
-            _progressService.InitializeProgress(GetOrCreate());
-            Debug.Log("[Load2] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+            //Debug.Log("[Load2] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+            //_progressService.InitializeProgress(GetOrCreate());
+            
+            // Yandex Games 
+            
+            YandexGame.LoadProgress();
+            _progressService.InitializeProgressYG();
         }
         
         private PlayerProgress GetOrCreate()
