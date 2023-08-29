@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoventMaterial
+  m_Name: MoventMaterial3
   m_Shader: {fileID: -6465566751694194690, guid: 5b6e4e5f459f4a54fb66af93b814deeb, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,7 +37,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Texture2D:
-        m_Texture: {fileID: 2800000, guid: 401077c15b9f98e4a874ce9f71fc1d5d, type: 3}
+        m_Texture: {fileID: 2800000, guid: c63a1acbd964e5a4a97949a10a52a4f3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -54,6 +54,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Speed: 0.1
+    - _Speed: 0.03
     m_Colors: []
   m_BuildTextureStacks: []
