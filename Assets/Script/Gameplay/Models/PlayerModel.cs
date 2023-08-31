@@ -17,6 +17,8 @@ namespace Script.Gameplay
         public event Action<int> OnScoreUpdate;
 
         public int TotalScore { get; private set; }
+        public AnimationController AnimContol;
+        
         private bool _isCanControlled;
         private StaticDataService _staticDataService;
         private PlayerJump _playerJump;
@@ -24,6 +26,8 @@ namespace Script.Gameplay
         private PlayerController _playerController;
         private ProgressService _progressService;
         private ShopModel _shopModel;
+        private ShaderService _shaderService;
+        private ParticleService _particleService;
         private SpawnerModel _spawnerModel;
         
         private Vector3 _spawnPos;
@@ -31,6 +35,8 @@ namespace Script.Gameplay
         public PlayerModel(StaticDataService staticDataService,
             PlayerJump playerJump, 
             ShopModel shopModel, 
+            ShaderService shaderService, 
+            ParticleService particleService, 
             ProgressService progressService, 
             SpawnerModel spawnerModel,
             CurrencyModel currencyModel)
@@ -40,6 +46,8 @@ namespace Script.Gameplay
             _currencyModel = currencyModel;
             _progressService = progressService;
             _shopModel = shopModel;
+            _shaderService = shaderService;
+            _particleService = particleService;
             _spawnerModel = spawnerModel;
             Subscribe();
         }
@@ -54,6 +62,7 @@ namespace Script.Gameplay
             
             _playerController = prefab.GetComponent<PlayerController>();
             _playerJump.Initialize(_playerController.Rigidbody);
+            AnimContol = _playerController.AnimControl;
             _playerController.OnCollisionDeath += CollisionDeath;
             _playerController.OnCollisionWay += CollisionWay;
             _playerController.OnCollisionPlatform += _playerJump.OnGround;
@@ -102,7 +111,7 @@ namespace Script.Gameplay
         {
             TotalScore++;
             OnScoreUpdate?.Invoke(TotalScore);
-            _spawnerModel.IncrementCD += 0.1f;
+            _spawnerModel.IncrementCD += 0.05f;
         }
 
         private void CollisionDeath()
@@ -111,8 +120,12 @@ namespace Script.Gameplay
             if (_progressService.PlayerProgress.BestScore < TotalScore)
                 _progressService.PlayerProgress.BestScore = TotalScore;
             
+            _spawnerModel.SetActiveMovement(false);
+            _spawnerModel.SetSpawnStatus(false);
+            _shaderService.ActivePlayerDeathAnim(true);
+            _shaderService.PauseDecorSpeed(true);
+            _particleService.SpawnParticle(ParticleType.Death, _playerController.transform);
             OnDeath?.Invoke();
-            
         }
 
         private void TickOnJump(float tick)

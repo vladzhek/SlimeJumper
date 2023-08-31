@@ -40,6 +40,8 @@ public class ServiceInstaller : MonoInstaller
         Container.Bind<AudioService>().AsSingle();
         Container.Bind<InjectService>().AsSingle();
         Container.Bind<AdsService>().AsSingle();
+        Container.Bind<ShaderService>().AsSingle();
+        Container.Bind<ParticleService>().AsSingle();
     }
 
     private void BindPrefabs()

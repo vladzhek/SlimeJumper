@@ -10,6 +10,8 @@ namespace Script.Gameplay.Services
         public PlayerData PlayerData;
         public SpawnData SpawnData;
         public AudioData AudioData;
+        public MaterialsData MaterialData;
+        public ParticleData ParticleData;
         public Dictionary<WindowType, WindowData> Windows = new();
         public Dictionary<SkinType, ShopComponent> Skins = new();
         public Dictionary<SpriteType, SpriteComponent> Sprites = new();
@@ -29,6 +31,8 @@ namespace Script.Gameplay.Services
             PlayerData = Resources.Load<PlayerData>("Configs/PlayerData");
             SpawnData = Resources.Load<SpawnData>("Configs/SpawnData");
             AudioData = Resources.Load<AudioData>("Configs/AudioData");
+            MaterialData = Resources.Load<MaterialsData>("Configs/Visual/MaterialsData");
+            ParticleData = Resources.Load<ParticleData>("Configs/Visual/ParticleData");
         }
         
         private void LoadWindows()

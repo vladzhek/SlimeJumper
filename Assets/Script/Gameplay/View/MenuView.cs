@@ -17,15 +17,18 @@ namespace Script.Gameplay.View
         private PlayerModel _playerModel;
         private UIManager _uiManager;
         private SpawnerModel _spawnerModel;
+        private ShaderService _shaderService;
 
         [Inject]
         public void Construct(PlayerModel playerModel,
             UIManager uiManager,
+            ShaderService shaderService,
             SpawnerModel spawnerModel)
         {
             _playerModel = playerModel;
             _uiManager = uiManager;
             _spawnerModel = spawnerModel;
+            _shaderService = shaderService;
         }
         
         private void Awake()
@@ -54,6 +57,7 @@ namespace Script.Gameplay.View
             _uiManager.OpenWindow(WindowType.Gameplay);
             _playerModel.SetPlayerControlled(true);
             _spawnerModel.SetSpawnStatus(true);
+            _shaderService.PauseDecorSpeed(false);
         }
     }
 }

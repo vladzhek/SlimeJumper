@@ -54,14 +54,10 @@ namespace Script.Gameplay.View
                 Console.WriteLine("[DeathView/LeaderBoard] FAILED");
                 throw;
             }
-            
-            _timeModel.SetActivePause(true);
         }
         
         private void GoToMenu()
         {
-            _timeModel.SetActivePause(false);
-            
             _uiManager.CloseWindow(WindowType.Death);
             _uiManager.ReloadUI();
         }

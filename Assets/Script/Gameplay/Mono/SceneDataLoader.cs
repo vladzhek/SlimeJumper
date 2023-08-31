@@ -25,6 +25,7 @@ public class SceneDataLoader : MonoBehaviour
     private UIManager _uiManager;
     private TimeModel _timeModel;
     private ShopModel _shopModel;
+    private ShaderService _shaderService;
     private SettingModel _settingModel;
     private AchievementModel _achievementModel;
     private AudioService _audioService;
@@ -38,6 +39,7 @@ public class SceneDataLoader : MonoBehaviour
         UIManager uiManager,
         TimeModel timeModel,
         ShopModel shopModel,
+        ShaderService shaderService,
         SettingModel settingModel,
         AchievementModel achievementModel,
         AudioService audioService,
@@ -52,6 +54,7 @@ public class SceneDataLoader : MonoBehaviour
         _uiManager = uiManager;
         _timeModel = timeModel;
         _shopModel = shopModel;
+        _shaderService = shaderService;
         _settingModel = settingModel;
         _audioService = audioService;
         _achievementModel = achievementModel;
@@ -66,16 +69,13 @@ public class SceneDataLoader : MonoBehaviour
         _saveLoadService.LoadProgress();
         _uiManager.Load();
         
-        // TODO: Бабосы позже удалить
-        //_currencyModel.AddCurrency(CurrencyType.Soft, 200);
-        //_currencyModel.AddCurrency(CurrencyType.Hard, 200);
-
         _shopModel.Initialize();
         _playerModel.Initialize(_playerPositon.position);
         _spawnerModel.Initialize(_spawnPostion);
         _achievementModel.Initialize();
         _audioService.Initialize(_staticDataService, _sfx, _music);
         _adsService.Initialize();
+        _shaderService.Initialize(_playerModel);
         Subscribe();
     }
     
@@ -85,6 +85,9 @@ public class SceneDataLoader : MonoBehaviour
         
         _uiManager.OpenWindow(WindowType.Menu);
         _uiManager.OpenWindow(WindowType.Header);
+        
+        _shaderService.PauseDecorSpeed(true);
+        _shaderService.ActivePlayerDeathAnim(false);
     }
 
     private void Subscribe()
@@ -104,6 +107,8 @@ public class SceneDataLoader : MonoBehaviour
         _spawnerModel.ClearObstacle();
         _spawnerModel.SetSpawnStatus(false);
         _adsService.ShowFullScreenBanner();
+        _shaderService.PauseDecorSpeed(true);
+        _shaderService.ActivePlayerDeathAnim(false);
     }
 
     //--- Gameplay
@@ -127,6 +132,7 @@ public class SceneDataLoader : MonoBehaviour
     private void OnApplicationQuit()
     {
         _saveLoadService.SaveProgress();
+        _shaderService.PauseDecorSpeed(false);
     }
 
     private void OnApplicationPause(bool pauseStatus)

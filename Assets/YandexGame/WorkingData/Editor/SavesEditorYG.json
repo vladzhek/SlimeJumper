@@ -1,5 +1,5 @@
 {
-    "idSave": 59,
+    "idSave": 153,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,11 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 498
+                "Amount": 1911
             },
             {
                 "Type": 1,
-                "Amount": 400
+                "Amount": 395
             },
             {
                 "Type": 0,
@@ -26,32 +26,32 @@
             {
                 "SkinID": 0,
                 "IsBuyed": true,
-                "IsSelected": false
+                "IsSelected": true
             },
             {
                 "SkinID": 1,
-                "IsBuyed": false,
+                "IsBuyed": true,
                 "IsSelected": false
             },
             {
                 "SkinID": 2,
-                "IsBuyed": false,
+                "IsBuyed": true,
                 "IsSelected": false
             },
             {
                 "SkinID": 3,
-                "IsBuyed": false,
+                "IsBuyed": true,
                 "IsSelected": false
             },
             {
                 "SkinID": 4,
-                "IsBuyed": false,
+                "IsBuyed": true,
                 "IsSelected": false
             },
             {
                 "SkinID": 5,
                 "IsBuyed": true,
-                "IsSelected": true
+                "IsSelected": false
             },
             {
                 "SkinID": 6,
@@ -65,7 +65,7 @@
             },
             {
                 "SkinID": 8,
-                "IsBuyed": false,
+                "IsBuyed": true,
                 "IsSelected": false
             }
         ],
@@ -74,61 +74,61 @@
                 "ID": "1",
                 "Type": 0,
                 "IsDone": true,
-                "IsTake": false,
+                "IsTake": true,
                 "Collected": 50
             },
             {
                 "ID": "2",
                 "Type": 1,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 10
+                "Collected": 50
             },
             {
                 "ID": "3",
                 "Type": 2,
                 "IsDone": true,
-                "IsTake": false,
+                "IsTake": true,
                 "Collected": 25
             },
             {
                 "ID": "4",
                 "Type": 3,
                 "IsDone": true,
-                "IsTake": false,
+                "IsTake": true,
                 "Collected": 10
             },
             {
                 "ID": "5",
                 "Type": 0,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 102
+                "Collected": 500
             },
             {
                 "ID": "6",
                 "Type": 1,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 10
+                "Collected": 140
             },
             {
                 "ID": "7",
                 "Type": 2,
-                "IsDone": false,
-                "IsTake": false,
-                "Collected": 171
+                "IsDone": true,
+                "IsTake": true,
+                "Collected": 250
             },
             {
                 "ID": "8",
                 "Type": 3,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 13
+                "Collected": 100
             }
         ],
-        "BestScore": 11,
-        "SFXVolume": 1.0,
-        "MusicVolume": 1.0
+        "BestScore": 22,
+        "SFXVolume": 0.5156223177909851,
+        "MusicVolume": 0.4983481168746948
     }
 }

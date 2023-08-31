@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.15131584, g: 0.22871438, b: 0.3019001, a: 1}
+  m_IndirectSpecularColor: {r: 0.15131342, g: 0.22873351, b: 0.30189598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -441,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 398726587}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.6, y: -3.39, z: 0}
+  m_LocalPosition: {x: 11.6, y: -3.509, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,7 +472,7 @@ Transform:
   m_GameObject: {fileID: 470364027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.39, y: 0.75, z: 0}
+  m_LocalPosition: {x: -6.39, y: -2.37, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1252,7 +1252,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1285211741}
   - component: {fileID: 1285211738}
-  - component: {fileID: 1285211740}
   - component: {fileID: 1285211739}
   m_Layer: 0
   m_Name: UI
@@ -1356,14 +1355,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1285211740
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1285211737}
-  m_Enabled: 1
 --- !u!4 &1285211741
 Transform:
   m_ObjectHideFlags: 0

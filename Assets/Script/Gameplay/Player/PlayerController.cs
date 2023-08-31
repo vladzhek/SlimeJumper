@@ -6,7 +6,9 @@ namespace Script.Gameplay.Player
 {
     public class PlayerController : MonoBehaviour
     {
+        [SerializeField] public AnimationController AnimControl;
         [SerializeField] private SpriteRenderer _playerSkin;
+
         public event Action OnCollisionDeath;
         public event Action OnCollisionPlatform;
         public event Action OnCollisionWay;
