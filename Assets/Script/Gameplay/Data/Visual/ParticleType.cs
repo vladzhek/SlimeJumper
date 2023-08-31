@@ -3,5 +3,7 @@
     public enum ParticleType
     {
         Death,
+        Respawn,
+        Arrived,
     }
 }

@@ -18,6 +18,8 @@ namespace Script.Gameplay.Player
         private bool _isIncreasingForce;
         private float _forceChangeSpeed;
 
+        private ParticleData _data;
+
         public void Initialize(Rigidbody2D rigidbody)
         {
             _rigidbody = rigidbody;
@@ -41,6 +43,7 @@ namespace Script.Gameplay.Player
             if (_onGround)
             {
                 ForceBody();
+
             }
             
             _jumpForce = Values.MIN_JUMP_FORCE_PLAYER;
