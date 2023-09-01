@@ -1,5 +1,5 @@
 {
-    "idSave": 186,
+    "idSave": 205,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,7 +7,7 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 2240
+                "Amount": 2243
             },
             {
                 "Type": 1,
