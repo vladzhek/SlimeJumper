@@ -1,6 +1,5 @@
 ﻿using System;
 using Script.Gameplay.Data;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 namespace Script.Gameplay.Mono

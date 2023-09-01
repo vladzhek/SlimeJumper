@@ -30,6 +30,7 @@ public class SceneDataLoader : MonoBehaviour
     private AchievementModel _achievementModel;
     private AudioService _audioService;
     private AdsService _adsService;
+    private ParticleService _particleService;
 
     [Inject]
     public void Construct(SpawnerModel spawnerModel,
@@ -44,6 +45,7 @@ public class SceneDataLoader : MonoBehaviour
         AchievementModel achievementModel,
         AudioService audioService,
         AdsService adsService,
+        ParticleService particleService,
         PlayerModel playerModel)
     {
         _playerModel = playerModel;
@@ -59,6 +61,7 @@ public class SceneDataLoader : MonoBehaviour
         _audioService = audioService;
         _achievementModel = achievementModel;
         _adsService = adsService;
+        _particleService = particleService;
     }
     
     //--- Enter game
@@ -109,6 +112,7 @@ public class SceneDataLoader : MonoBehaviour
         _adsService.ShowFullScreenBanner();
         _shaderService.PauseDecorSpeed(true);
         _shaderService.ActivePlayerDeathAnim(false);
+        _particleService.SpawnParticle(ParticleType.Respawn, _playerModel.PlayerControl.transform);
     }
 
     //--- Gameplay

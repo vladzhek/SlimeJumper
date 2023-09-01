@@ -5,5 +5,7 @@
         Death,
         Respawn,
         Arrived,
+        Coin,
+        None,
     }
 }

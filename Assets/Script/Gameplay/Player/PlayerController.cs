@@ -12,7 +12,7 @@ namespace Script.Gameplay.Player
         public event Action OnCollisionDeath;
         public event Action OnCollisionPlatform;
         public event Action OnCollisionWay;
-        public event Action<BonusType> OnCollisionBonus;
+        public event Action<Transform,BonusType> OnCollisionBonus;
         public Rigidbody2D Rigidbody => GetComponent<Rigidbody2D>();
         
         private void OnCollisionEnter2D(Collision2D collision)
@@ -36,7 +36,7 @@ namespace Script.Gameplay.Player
             if (collision.CompareTag(Values.BONUS_COLLIDER))
             {
                 var bonusType = collision.GetComponent<Bonus>().Type;
-                OnCollisionBonus?.Invoke(bonusType);
+                OnCollisionBonus?.Invoke(collision.transform, bonusType);
                 
                 Destroy(collision.gameObject);
             }

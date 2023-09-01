@@ -52,6 +52,10 @@ namespace Script.Gameplay.Player
                 yield return null;
                 yield return null;
                 yield return null;
+                yield return null;
+                yield return null;
+                yield return null;
+                yield return null;
             }
         }
     }

@@ -30,7 +30,7 @@ namespace Script.Gameplay.Services
 
         public void ActivePlayerDeathAnim(bool isActive)
         {
-            _playerModel.AnimContol.ActiveAnimation(isActive);
+            _playerModel.AnimControl.ActiveAnimation(isActive);
         }
 
         public void PauseDecorSpeed(bool isActive)

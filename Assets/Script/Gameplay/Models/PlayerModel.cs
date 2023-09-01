@@ -17,7 +17,8 @@ namespace Script.Gameplay
         public event Action<int> OnScoreUpdate;
 
         public int TotalScore { get; private set; }
-        public AnimationController AnimContol;
+        public AnimationController AnimControl { get; private set; }
+        public PlayerController PlayerControl { get; private set; }
         
         private bool _isCanControlled;
         private StaticDataService _staticDataService;
@@ -62,10 +63,12 @@ namespace Script.Gameplay
             
             _playerController = prefab.GetComponent<PlayerController>();
             _playerJump.Initialize(_playerController.Rigidbody);
-            AnimContol = _playerController.AnimControl;
+            AnimControl = _playerController.AnimControl;
+            PlayerControl = _playerController;
             _playerController.OnCollisionDeath += CollisionDeath;
             _playerController.OnCollisionWay += CollisionWay;
             _playerController.OnCollisionPlatform += _playerJump.OnGround;
+            _playerController.OnCollisionPlatform += CollisionGround;
             _playerController.OnCollisionBonus += CollisionBonus;
             _shopModel.OnUpdateSkin += UpdateSkin;
             
@@ -73,7 +76,7 @@ namespace Script.Gameplay
                 .Find(x => x.IsSelected);
             UpdateSkin(currentSkin.SkinID);
         }
-        
+
         private void Subscribe()
         {
             OnStartJump += _playerJump.StartJump;
@@ -92,15 +95,17 @@ namespace Script.Gameplay
             _playerController.transform.position = _spawnPos;
         }
 
-        private void CollisionBonus(BonusType type)
+        private void CollisionBonus(Transform transform, BonusType type)
         {
             switch (type)
             {
                 case BonusType.Coin:
                     _currencyModel.AddCurrency(CurrencyType.Soft, 1);
+                    _particleService.SpawnParticle(ParticleType.Coin, transform);
                     break;
                 case BonusType.HardCoin:
                     _currencyModel.AddCurrency(CurrencyType.Hard, 1);
+                    _particleService.SpawnParticle(ParticleType.Coin, _playerController.transform);
                     break;
                 default:
                     Debug.LogWarning("[PlayerModel] CollisionBonus() => switch"); break;
@@ -112,6 +117,11 @@ namespace Script.Gameplay
             TotalScore++;
             OnScoreUpdate?.Invoke(TotalScore);
             _spawnerModel.IncrementCD += 0.05f;
+        }
+        
+        private void CollisionGround()
+        {
+            _particleService.SpawnParticle(ParticleType.Arrived, _playerController.transform);
         }
 
         private void CollisionDeath()
