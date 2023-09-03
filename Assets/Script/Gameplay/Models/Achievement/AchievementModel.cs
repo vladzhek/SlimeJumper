@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Script.Gameplay.Data;
 using Script.Gameplay.Data.Achievement;
 using Script.Gameplay.Data.Progress;
+using Script.Gameplay.Mono;
 using Script.Gameplay.Progress;
 using Script.Gameplay.Services;
 using Zenject.SpaceFighter;
@@ -12,11 +13,14 @@ namespace Script.Gameplay
     public class AchievementModel
     {
         public event Action<string> OnAchieveProgress;
+        public event Action<NotifType> OnAchieveDone;
+        public bool CanTakeAchive = false;
         
         private StaticDataService _staticDataService;
         private ProgressService _progressService;
         private CurrencyModel _currencyModel;
         private PlayerModel _playerModel;
+        private UIManager _uiManager;
         private Dictionary<string, Achievement> _achievements = new();
 
         private List<AchieveType> _currencyAchieve = new();
@@ -24,12 +28,14 @@ namespace Script.Gameplay
         public AchievementModel(StaticDataService staticDataService,
             CurrencyModel currencyModel,
             PlayerModel playerModel,
+            UIManager uiManager,
             ProgressService progressService)
         {
             _staticDataService = staticDataService;
             _progressService = progressService;
             _currencyModel = currencyModel;
             _playerModel = playerModel;
+            _uiManager = uiManager;
         }
 
         public void Initialize()
@@ -84,6 +90,8 @@ namespace Script.Gameplay
             progress.IsDone = _achievements[id].Progress.IsDone;
             
             OnAchieveProgress?.Invoke(id);
+            OnAchieveDone?.Invoke(NotifType.Achievement);
+            CanTakeAchive = true;
         }
 
         private void TryCreateProgress()

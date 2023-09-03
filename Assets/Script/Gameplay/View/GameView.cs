@@ -12,16 +12,19 @@ public class GameView : MonoBehaviour
     [SerializeField] private TMP_Text _score;
     [SerializeField] private Slider _slider;
     [SerializeField] private Image _fill;
+    [SerializeField] private Image _handle;
     [SerializeField] private Gradient _gradient;
     
     private PlayerModel _playerModel;
     private UIManager _uiManager;
+    private ShopModel _shopModel;
 
     [Inject]
-    public void Construct(PlayerModel playerModel, UIManager uiManager)
+    public void Construct(PlayerModel playerModel, UIManager uiManager, ShopModel shopModel)
     {
         _playerModel = playerModel;
         _uiManager = uiManager;
+        _shopModel = shopModel;
 
         uiManager.OnReload += Reload;
         _playerModel.OnTickInJump += IsTicked;
@@ -32,6 +35,11 @@ public class GameView : MonoBehaviour
     {
         InjectService.Instance.Inject(this);
         Reload();
+    }
+
+    private void OnEnable()
+    {
+        _handle.sprite = _shopModel.GetSelectSkinImage();
     }
 
     private void UpdateScore(int score)

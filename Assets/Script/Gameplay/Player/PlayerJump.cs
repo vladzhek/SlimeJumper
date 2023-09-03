@@ -1,5 +1,6 @@
 ﻿using System;
 using Script.Gameplay.Data;
+using Script.Gameplay.Services;
 using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
@@ -19,9 +20,12 @@ namespace Script.Gameplay.Player
         private float _forceChangeSpeed;
 
         private ParticleData _data;
+        private AudioService _audioService;
 
-        public void Initialize(Rigidbody2D rigidbody)
+        public void Initialize(Rigidbody2D rigidbody, AudioService audioService)
         {
+            _audioService = audioService;
+            
             _rigidbody = rigidbody;
             _isJumping = false;
 
@@ -81,6 +85,7 @@ namespace Script.Gameplay.Player
         {
             _rigidbody.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
             _onGround = false;
+            _audioService.PlayAudio(AudioSourcesType.SFXSource, ClipID.SlimeJump);
         }
         
         private float MapToNewRange(float value, float originalMin, float originalMax)

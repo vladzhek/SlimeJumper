@@ -15,6 +15,14 @@ MonoBehaviour:
   Mixer: {fileID: 24100000, guid: 72a53abc8b531e9468b0e395c215e279, type: 2}
   AudioClips:
   - ID: 0
-    Clip: {fileID: 0}
+    Clip: {fileID: 8300000, guid: 2e24ada9f41229e4e9b388f5bd35a5d9, type: 3}
   - ID: 1
     Clip: {fileID: 8300000, guid: f9cc1e56ec19cb9498ea4f79efd4b317, type: 3}
+  - ID: 2
+    Clip: {fileID: 8300000, guid: d948bbc0691c0a44bb0e7ecba06f75c1, type: 3}
+  - ID: 3
+    Clip: {fileID: 8300000, guid: 9bb3cd493f3b61f458dc3d96017d9531, type: 3}
+  - ID: 5
+    Clip: {fileID: 8300000, guid: 9d130bb90b065c04fba8068ecea453bf, type: 3}
+  - ID: 4
+    Clip: {fileID: 8300000, guid: abe27192c15118e46970556b53fd9f5a, type: 3}

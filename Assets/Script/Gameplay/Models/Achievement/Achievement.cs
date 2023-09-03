@@ -21,6 +21,8 @@ namespace Script.Gameplay
 
         public void UpdateProgress(int amount)
         {
+            if(Progress.IsDone) return;
+
             if (Progress.Collected + amount >= Data.amount)
             {
                 Progress.Collected = Data.amount;

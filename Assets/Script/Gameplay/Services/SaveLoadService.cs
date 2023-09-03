@@ -22,6 +22,7 @@ namespace Script.Gameplay.Services
             //Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
             
             // Yandex Games 
+            //ResetData();
             YandexGame.savesData.PlayerProgress = _progressService.PlayerProgress;
             YandexGame.SaveProgress();
         }
@@ -46,6 +47,11 @@ namespace Script.Gameplay.Services
             }
             
             return new PlayerProgress();
+        }
+
+        private void ResetData()
+        {
+            YandexGame.savesData.PlayerProgress = new PlayerProgress();
         }
     }
 }

@@ -1,5 +1,5 @@
 {
-    "idSave": 257,
+    "idSave": 303,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,19 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 2439
+                "Amount": 140
             },
             {
                 "Type": 1,
-                "Amount": 405
-            },
-            {
-                "Type": 0,
-                "Amount": 594
-            },
-            {
-                "Type": 1,
-                "Amount": 600
+                "Amount": 1
             }
         ],
         "ShopDataProgresses": [
@@ -40,12 +32,12 @@
             },
             {
                 "SkinID": 3,
-                "IsBuyed": true,
+                "IsBuyed": false,
                 "IsSelected": false
             },
             {
                 "SkinID": 4,
-                "IsBuyed": true,
+                "IsBuyed": false,
                 "IsSelected": false
             },
             {
@@ -95,40 +87,40 @@
                 "ID": "4",
                 "Type": 3,
                 "IsDone": true,
-                "IsTake": true,
+                "IsTake": false,
                 "Collected": 10
             },
             {
                 "ID": "5",
                 "Type": 0,
-                "IsDone": true,
-                "IsTake": true,
-                "Collected": 500
+                "IsDone": false,
+                "IsTake": false,
+                "Collected": 205
             },
             {
                 "ID": "6",
                 "Type": 1,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 140
+                "Collected": 65
             },
             {
                 "ID": "7",
                 "Type": 2,
                 "IsDone": true,
-                "IsTake": true,
+                "IsTake": false,
                 "Collected": 250
             },
             {
                 "ID": "8",
                 "Type": 3,
-                "IsDone": true,
+                "IsDone": false,
                 "IsTake": false,
-                "Collected": 100
+                "Collected": 10
             }
         ],
-        "BestScore": 22,
-        "SFXVolume": 0.9894854426383972,
+        "BestScore": 16,
+        "SFXVolume": 0.4623567461967468,
         "MusicVolume": 1.0
     }
 }

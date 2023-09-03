@@ -27,6 +27,7 @@ namespace Script.Gameplay
         private PlayerController _playerController;
         private ProgressService _progressService;
         private ShopModel _shopModel;
+        private AudioService _audioService;
         private ShaderService _shaderService;
         private ParticleService _particleService;
         private SpawnerModel _spawnerModel;
@@ -40,6 +41,7 @@ namespace Script.Gameplay
             ParticleService particleService, 
             ProgressService progressService, 
             SpawnerModel spawnerModel,
+            AudioService audioService,
             CurrencyModel currencyModel)
         {
             _staticDataService = staticDataService;
@@ -50,6 +52,7 @@ namespace Script.Gameplay
             _shaderService = shaderService;
             _particleService = particleService;
             _spawnerModel = spawnerModel;
+            _audioService = audioService;
             Subscribe();
         }
 
@@ -62,7 +65,7 @@ namespace Script.Gameplay
             var prefab = GameObject.Instantiate(_staticDataService.PlayerData.Prefab, _spawnPos, Quaternion.identity);
             
             _playerController = prefab.GetComponent<PlayerController>();
-            _playerJump.Initialize(_playerController.Rigidbody);
+            _playerJump.Initialize(_playerController.Rigidbody, _audioService);
             AnimControl = _playerController.AnimControl;
             PlayerControl = _playerController;
             _playerController.OnCollisionDeath += CollisionDeath;
@@ -102,10 +105,12 @@ namespace Script.Gameplay
                 case BonusType.Coin:
                     _currencyModel.AddCurrency(CurrencyType.Soft, 1);
                     _particleService.SpawnParticle(ParticleType.Coin, transform);
+                    _audioService.PlayAudio(AudioSourcesType.SFXSource,ClipID.TakeMoney);
                     break;
                 case BonusType.HardCoin:
                     _currencyModel.AddCurrency(CurrencyType.Hard, 1);
                     _particleService.SpawnParticle(ParticleType.Coin, _playerController.transform);
+                    _audioService.PlayAudio(AudioSourcesType.SFXSource,ClipID.TakeMoney);
                     break;
                 default:
                     Debug.LogWarning("[PlayerModel] CollisionBonus() => switch"); break;
@@ -122,6 +127,7 @@ namespace Script.Gameplay
         private void CollisionGround()
         {
             _particleService.SpawnParticle(ParticleType.Arrived, _playerController.transform);
+            _audioService.PlayAudio(AudioSourcesType.SFXSource, ClipID.SlimeFall);
         }
 
         private void CollisionDeath()
@@ -135,6 +141,7 @@ namespace Script.Gameplay
             _shaderService.ActivePlayerDeathAnim(true);
             _shaderService.PauseDecorSpeed(true);
             _particleService.SpawnParticle(ParticleType.Death, _playerController.transform);
+            _audioService.PlayAudio(AudioSourcesType.SFXSource, ClipID.SlimeDie);
             OnDeath?.Invoke();
         }
 

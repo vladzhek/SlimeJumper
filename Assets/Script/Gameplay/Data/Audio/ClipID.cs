@@ -5,6 +5,8 @@
         MainMusic,
         ButtonClick,
         SlimeJump,
+        SlimeFall,
+        TakeMoney,
         SlimeDie,
     }
 }

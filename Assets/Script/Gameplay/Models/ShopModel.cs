@@ -3,6 +3,8 @@ using Script.Gameplay.Data;
 using Script.Gameplay.Data.Progress;
 using Script.Gameplay.Progress;
 using Script.Gameplay.Services;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Script.Gameplay
 {
@@ -54,6 +56,12 @@ namespace Script.Gameplay
 
             selectSkin.IsSelected = true;
             OnUpdateSkin?.Invoke(id);
+        }
+
+        public Sprite GetSelectSkinImage()
+        {
+            var id = _progressService.PlayerProgress.ShopDataProgresses.Find(x => x.IsSelected);
+            return _staticDataService.Skins[id.SkinID].Skin;
         }
     }
 }

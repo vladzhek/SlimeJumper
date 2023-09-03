@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Script.Gameplay.Data;
+using Script.Gameplay.Data.Achievement;
 using Script.Gameplay.Data.Game;
 using Script.Gameplay.Services;
 using Script.Gameplay.View;
@@ -12,7 +13,7 @@ namespace Script.Gameplay.Mono
     public class UIManager : MonoBehaviour
     {
         public event Action OnReload;
-        
+
         [SerializeField] private RectTransform _parent;
         
         private Dictionary<WindowType, GameObject> _openWindows;
