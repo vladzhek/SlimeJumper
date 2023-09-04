@@ -1,5 +1,5 @@
 {
-    "idSave": 360,
+    "idSave": 368,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,7 +7,7 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 871
+                "Amount": 920
             },
             {
                 "Type": 1,
@@ -23,7 +23,7 @@
             {
                 "SkinID": 1,
                 "IsBuyed": true,
-                "IsSelected": false
+                "IsSelected": true
             },
             {
                 "SkinID": 2,
@@ -43,7 +43,7 @@
             {
                 "SkinID": 5,
                 "IsBuyed": true,
-                "IsSelected": true
+                "IsSelected": false
             },
             {
                 "SkinID": 6,
@@ -116,7 +116,7 @@
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 73
+                "Collected": 80
             }
         ],
         "BestScore": 20,
