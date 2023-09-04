@@ -152,7 +152,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      notif_icon_0: 2794885306021577052
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
