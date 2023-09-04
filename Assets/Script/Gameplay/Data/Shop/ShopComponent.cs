@@ -10,5 +10,6 @@ namespace Script.Gameplay.Data
         public Sprite Skin;
         public CurrencyType CurrencyID;
         public int Price;
+        public Color EffectColor = Color.cyan;
     }
 }

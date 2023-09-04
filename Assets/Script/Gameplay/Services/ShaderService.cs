@@ -41,5 +41,10 @@ namespace Script.Gameplay.Services
                 material.SetFloat(Speed ,value);
             }
         }
+
+        public void ChangeColorEffects(Color color)
+        {
+            _staticDataService.MaterialData.PlayerColorsMaterial.color = color;
+        }
     }
 }

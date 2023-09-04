@@ -7,6 +7,7 @@ namespace Script.Gameplay.Data
     public class MaterialsData : ScriptableObject
     {
         public Material PlayerMaterial;
+        public Material PlayerColorsMaterial;
         public List<MaterialComponent> Materials;
     }
 }

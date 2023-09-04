@@ -15,10 +15,11 @@ namespace Script.Gameplay.View
     public class ShopView : MonoBehaviour
     {
         private event Action OnUpdateState;
+        private const int COUNT_COLUMNS = 4;
         
         [SerializeField] private Button _closeWindow;
         [SerializeField] private ShopSubView _shopSubView;
-        [SerializeField] private RectTransform _content;
+        [SerializeField] private GameObject _container;
 
         private PlayerModel _playerModel;
         private UIManager _uiManager;
@@ -54,12 +55,19 @@ namespace Script.Gameplay.View
             CreateSubViews();
         }
 
+        private void Start()
+        {
+            var width = _container.GetComponent<RectTransform>().rect.width;
+            var cellSize = new Vector2(width / COUNT_COLUMNS, width / COUNT_COLUMNS);
+            _container.GetComponent<GridLayoutGroup>().cellSize = cellSize;
+        }
+
         private void CreateSubViews()
         {
             var sortedSkins = SortingSkinsByPrice(_staticDataService.Skins);
             foreach (var (key, value ) in sortedSkins)
             {
-                var subView = Instantiate(_shopSubView, _content);
+                var subView = Instantiate(_shopSubView, _container.GetComponent<RectTransform>());
                 var progress = _progress.PlayerProgress.ShopDataProgresses.Find(x => x.SkinID == key);
                 var sprite = GetSpriteCurrency(value.CurrencyID);
                 

@@ -30,7 +30,13 @@ namespace Script.Gameplay.Services
         public void PlayAudio(AudioSourcesType idSource, ClipID clipID)
         {
             var clip = _staticDataService.AudioData.AudioClips.Find(x => x.ID == clipID).Clip;
+            RandomPitchValue(AudioSources[idSource]);
             AudioSources[idSource].PlayOneShot(clip);
+        }
+        
+        private void RandomPitchValue(AudioSource source)
+        {
+            source.pitch = Random.Range(0.92f, 1.1f);
         }
     }
 }

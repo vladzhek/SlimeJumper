@@ -164,8 +164,9 @@ namespace Script.Gameplay
 
         private void UpdateSkin(SkinType skinID)
         {
-            var skin = _staticDataService.Skins[skinID].Skin;
-            _playerController.UpdateSkin(skin);
+            var skin = _staticDataService.Skins[skinID];
+            _playerController.UpdateSkin(skin.Skin);
+            _shaderService.ChangeColorEffects(skin.EffectColor);
         }
 
         public void ResetScore()

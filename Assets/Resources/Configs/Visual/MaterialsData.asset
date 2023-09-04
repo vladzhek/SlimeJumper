@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: MaterialsData
   m_EditorClassIdentifier: 
   PlayerMaterial: {fileID: 2100000, guid: a352eb926dc834244838634266166af0, type: 2}
+  PlayerColorsMaterial: {fileID: 2100000, guid: 7329c7498131ffb4881afc7291831070, type: 2}
   Materials:
   - Material: {fileID: 2100000, guid: a58bddbc0ef60d44c8fdea85d3395300, type: 2}
   - Material: {fileID: 2100000, guid: 9903d3496351b85419b7d421cc028cd8, type: 2}

@@ -1,5 +1,5 @@
 {
-    "idSave": 323,
+    "idSave": 360,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,11 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 544
+                "Amount": 871
             },
             {
                 "Type": 1,
-                "Amount": 1
+                "Amount": 2
             }
         ],
         "ShopDataProgresses": [
@@ -43,7 +43,7 @@
             {
                 "SkinID": 5,
                 "IsBuyed": true,
-                "IsSelected": false
+                "IsSelected": true
             },
             {
                 "SkinID": 6,
@@ -58,7 +58,7 @@
             {
                 "SkinID": 8,
                 "IsBuyed": true,
-                "IsSelected": true
+                "IsSelected": false
             }
         ],
         "AchieveDataProgresses": [
@@ -116,11 +116,11 @@
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 45
+                "Collected": 73
             }
         ],
-        "BestScore": 18,
-        "SFXVolume": 1.0,
-        "MusicVolume": 1.0
+        "BestScore": 20,
+        "SFXVolume": 0.7701342105865479,
+        "MusicVolume": 0.7703671455383301
     }
 }

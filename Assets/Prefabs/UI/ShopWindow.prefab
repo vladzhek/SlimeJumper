@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _closeWindow: {fileID: 4991527192636535288}
   _shopSubView: {fileID: 2656333092872482675, guid: 86413a8c66555a0489d5e4597439c978, type: 3}
-  _content: {fileID: 4114873174990458974}
+  _container: {fileID: 1959353489451138348}
 --- !u!1 &1959353489451138348
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4114873174990458974}
   - component: {fileID: 7492110819060878784}
   m_Layer: 5
-  m_Name: Content
+  m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -242,8 +242,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 150, y: 150}
   m_Spacing: {x: 45, y: 45}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1 &4196575026167065800
 GameObject:
   m_ObjectHideFlags: 0
