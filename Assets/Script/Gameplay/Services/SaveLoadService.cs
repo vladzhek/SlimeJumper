@@ -17,25 +17,28 @@ namespace Script.Gameplay.Services
 
         public void SaveProgress()
         {
-            // Mobile device
-            //PlayerPrefs.SetString(SavesKey, JsonUtility.ToJson(_progressService.PlayerProgress));
-            //Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
-            
-            // Yandex Games 
+#if UNITY_ANDROID
+            PlayerPrefs.SetString(SavesKey, JsonUtility.ToJson(_progressService.PlayerProgress));
+            Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+#endif            
+#if UNITY_EDITOR || UNITY_WEBGL
             //ResetData();
             YandexGame.savesData.PlayerProgress = _progressService.PlayerProgress;
             YandexGame.SaveProgress();
+#endif            
         }
         
         public void LoadProgress()
         {
-            //Debug.Log("[Load2] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
-            //_progressService.InitializeProgress(GetOrCreate());
+#if UNITY_ANDROID
+            Debug.Log("[Load2] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
+            _progressService.InitializeProgress(GetOrCreate());
+#endif
             
-            // Yandex Games 
-            
+#if UNITY_EDITOR || UNITY_WEBGL
             YandexGame.LoadProgress();
             _progressService.InitializeProgressYG();
+#endif
         }
         
         private PlayerProgress GetOrCreate()
