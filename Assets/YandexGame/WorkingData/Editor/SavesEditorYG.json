@@ -1,5 +1,5 @@
 {
-    "idSave": 398,
+    "idSave": 431,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,11 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 0
+                "Amount": 223
             },
             {
                 "Type": 1,
-                "Amount": 0
+                "Amount": 2
             }
         ],
         "ShopDataProgresses": [
@@ -67,7 +67,7 @@
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 223
             },
             {
                 "ID": "2",
@@ -79,23 +79,23 @@
             {
                 "ID": "3",
                 "Type": 2,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 100
             },
             {
                 "ID": "4",
                 "Type": 3,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 10
             },
             {
                 "ID": "5",
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 223
             },
             {
                 "ID": "6",
@@ -109,17 +109,17 @@
                 "Type": 2,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 943
             },
             {
                 "ID": "8",
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 0
+                "Collected": 17
             }
         ],
-        "BestScore": 0,
+        "BestScore": 21,
         "SFXVolume": 1.0,
         "MusicVolume": 1.0
     }

@@ -71,6 +71,7 @@ public class SceneDataLoader : MonoBehaviour
         _staticDataService.Load();
         _saveLoadService.LoadProgress();
         _uiManager.Load();
+        CalculatePlayerPosition();
         
         _shopModel.Initialize();
         _playerModel.Initialize(_playerPositon.position);
@@ -144,6 +145,18 @@ public class SceneDataLoader : MonoBehaviour
         if (pauseStatus)
         {
             _saveLoadService.SaveProgress();
+        }
+    }
+    
+    private void CalculatePlayerPosition()
+    {
+        if (Screen.width > 1500)
+        {
+            _playerPositon.position = new Vector2(-5f, _playerPositon.position.y);
+        }
+        else
+        {
+            _playerPositon.position = new Vector2(-2f, _playerPositon.position.y);
         }
     }
 }
