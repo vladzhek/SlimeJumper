@@ -1,5 +1,5 @@
 {
-    "idSave": 431,
+    "idSave": 432,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,7 +7,7 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 223
+                "Amount": 279
             },
             {
                 "Type": 1,
@@ -65,9 +65,9 @@
             {
                 "ID": "1",
                 "Type": 0,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 223
+                "Collected": 250
             },
             {
                 "ID": "2",
@@ -95,7 +95,7 @@
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 223
+                "Collected": 279
             },
             {
                 "ID": "6",
@@ -107,16 +107,16 @@
             {
                 "ID": "7",
                 "Type": 2,
-                "IsDone": false,
+                "IsDone": true,
                 "IsTake": false,
-                "Collected": 943
+                "Collected": 1000
             },
             {
                 "ID": "8",
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 17
+                "Collected": 34
             }
         ],
         "BestScore": 21,
