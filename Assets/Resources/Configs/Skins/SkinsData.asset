@@ -34,12 +34,12 @@ MonoBehaviour:
     Price: 850
     EffectColor: {r: 0.92549026, g: 0.82745105, b: 0.03137255, a: 1}
   - SkinType: 4
-    Skin: {fileID: -3427779523035143108, guid: 889d5775d593b5145bb6235dd5963901, type: 3}
+    Skin: {fileID: 21300000, guid: 889d5775d593b5145bb6235dd5963901, type: 3}
     CurrencyID: 1
     Price: 100
     EffectColor: {r: 0.6509804, g: 0.7019608, b: 0.79215693, a: 1}
   - SkinType: 5
-    Skin: {fileID: -1061304625907517252, guid: 0b57284d5de61454cb97ca5c0516e778, type: 3}
+    Skin: {fileID: 21300000, guid: 0b57284d5de61454cb97ca5c0516e778, type: 3}
     CurrencyID: 0
     Price: 1000
     EffectColor: {r: 0, g: 0, b: 0.003921569, a: 1}
