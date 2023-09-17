@@ -1,5 +1,5 @@
 {
-    "idSave": 434,
+    "idSave": 469,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,7 +7,7 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 315
+                "Amount": 357
             },
             {
                 "Type": 1,
@@ -95,7 +95,7 @@
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 315
+                "Collected": 357
             },
             {
                 "ID": "6",
@@ -116,7 +116,7 @@
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 37
+                "Collected": 42
             }
         ],
         "BestScore": 21,
