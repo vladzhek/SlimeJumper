@@ -55,6 +55,6 @@ Material:
     m_Ints: []
     m_Floats:
     - _Pause: 0
-    - _Speed: 0.02
+    - _Speed: 0
     m_Colors: []
   m_BuildTextureStacks: []
