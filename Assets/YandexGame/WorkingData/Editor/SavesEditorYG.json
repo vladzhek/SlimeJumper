@@ -1,5 +1,5 @@
 {
-    "idSave": 504,
+    "idSave": 537,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,11 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 467
+                "Amount": 523
             },
             {
                 "Type": 1,
-                "Amount": 3
+                "Amount": 8
             }
         ],
         "ShopDataProgresses": [
@@ -95,7 +95,7 @@
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 467
+                "Collected": 523
             },
             {
                 "ID": "6",
@@ -116,7 +116,7 @@
                 "Type": 3,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 77
+                "Collected": 80
             }
         ],
         "BestScore": 21,

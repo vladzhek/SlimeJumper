@@ -60,6 +60,7 @@ namespace Script.Gameplay.View
             var width = _container.GetComponent<RectTransform>().rect.width;
             var cellSize = new Vector2(width / COUNT_COLUMNS, width / COUNT_COLUMNS);
             _container.GetComponent<GridLayoutGroup>().cellSize = cellSize;
+            _container.GetComponent<GridLayoutGroup>().spacing = cellSize / 2;
         }
 
         private void CreateSubViews()
