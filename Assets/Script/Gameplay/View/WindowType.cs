@@ -10,5 +10,6 @@
         Setting,
         Death,
         Achievement,
+        Empty,
     }
 }

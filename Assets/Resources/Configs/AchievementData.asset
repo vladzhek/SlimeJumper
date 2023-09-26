@@ -30,7 +30,7 @@ MonoBehaviour:
   - Sprite: {fileID: 21300000, guid: bc62067bb2c992b458d23fc4a791ece1, type: 3}
     ID: 3
     Type: 2
-    title: "\u041F\u0440\u043E\u0439\u0442\u0438 100 \u043F\u0440\u0438\u043F\u044F\u0442\u0441\u0432\u0438\u0439"
+    title: "\u041F\u0440\u043E\u0439\u0442\u0438 100 \u043F\u0440\u0438\u043F\u044F\u0442\u0441\u0442\u0432\u0438\u0439"
     amount: 100
     RewardType: 1
     RewardPrice: 10
@@ -58,7 +58,7 @@ MonoBehaviour:
   - Sprite: {fileID: 21300000, guid: bc62067bb2c992b458d23fc4a791ece1, type: 3}
     ID: 7
     Type: 2
-    title: "\u041F\u0440\u043E\u0439\u0442\u0438 1000 \u043F\u0440\u0438\u043F\u044F\u0442\u0441\u0432\u0438\u0439"
+    title: "\u041F\u0440\u043E\u0439\u0442\u0438 1000 \u043F\u0440\u0438\u043F\u044F\u0442\u0441\u0442\u0432\u0438\u0439"
     amount: 1000
     RewardType: 1
     RewardPrice: 25

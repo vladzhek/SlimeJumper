@@ -55,7 +55,7 @@ namespace Script.Gameplay.View
             CreateSubViews();
         }
 
-        private void Start()
+        private void Update()
         {
             var width = _container.GetComponent<RectTransform>().rect.width;
             var cellSize = new Vector2(width / COUNT_COLUMNS, width / COUNT_COLUMNS);

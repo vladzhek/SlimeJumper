@@ -11,13 +11,15 @@ namespace Script.Gameplay
         public event Action<CurrencyType, int> OnSpend;
         public event Action<CurrencyType, int> OnCollect;
         private ProgressService _progressService;
+        private SaveLoadService _saveLoadService;
         
         private int _coins;
         private Dictionary<CurrencyType, int> _currency = new();
 
-        public CurrencyModel(ProgressService progressService)
+        public CurrencyModel(ProgressService progressService, SaveLoadService saveLoadService)
         {
             _progressService = progressService;
+            _saveLoadService = saveLoadService;
         }
 
         public void AddCurrency(CurrencyType type, int amount)
@@ -28,6 +30,7 @@ namespace Script.Gameplay
             currency.Amount += amount;
             OnCurrencyUpdate?.Invoke(type, currency.Amount);
             OnCollect?.Invoke(type, amount);
+            _saveLoadService.SaveProgress();
         }
 
         public bool SpendCurrency(CurrencyType type, int amount)
@@ -42,6 +45,7 @@ namespace Script.Gameplay
             currency.Amount -= amount;
             OnCurrencyUpdate?.Invoke(type, currency.Amount);
             OnSpend?.Invoke(type, amount);
+            _saveLoadService.SaveProgress();
             return true;
         }
 
