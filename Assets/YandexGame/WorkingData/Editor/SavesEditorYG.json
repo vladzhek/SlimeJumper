@@ -1,5 +1,5 @@
 {
-    "idSave": 827,
+    "idSave": 888,
     "isFirstSession": false,
     "language": "ru",
     "promptDone": false,
@@ -7,11 +7,11 @@
         "CurrencyProgress": [
             {
                 "Type": 0,
-                "Amount": 744
+                "Amount": 794
             },
             {
                 "Type": 1,
-                "Amount": 24
+                "Amount": 25
             }
         ],
         "ShopDataProgresses": [
@@ -95,7 +95,7 @@
                 "Type": 0,
                 "IsDone": false,
                 "IsTake": false,
-                "Collected": 744
+                "Collected": 794
             },
             {
                 "ID": "6",
