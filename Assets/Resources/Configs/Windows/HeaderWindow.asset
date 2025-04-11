@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb4e3abb76a47d6a856a73ce132c692, type: 3}
   m_Name: HeaderWindow
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 1673670329151891829, guid: 269ed34cea7e07c46a181394e4e61f53, type: 3}
+  Prefab: {fileID: 5841585996853791639, guid: 139b0c35fbfbdd441bbb3a2f65fd8360, type: 3}
   Type: 1
