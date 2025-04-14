@@ -1,8 +1,6 @@
-﻿using System;
-using Script.Gameplay.Data;
+﻿using Script.Gameplay.Data;
 using Script.Gameplay.Mono;
 using UnityEngine;
-using YG;
 using Zenject;
 
 namespace Script.Gameplay.Services
@@ -20,11 +18,11 @@ namespace Script.Gameplay.Services
 
         public void Initialize()
         {
-            YandexGame.RewardVideoEvent += UserGotReward;
-            YandexGame.OpenVideoEvent += OpenEmpty;
-            YandexGame.CloseVideoEvent += CloseEmpty;
-            YandexGame.ErrorVideoEvent += CloseEmpty;
-            YandexGame.ErrorFullAdEvent += CloseEmpty;
+            //YandexGame.RewardVideoEvent += UserGotReward;
+            //YandexGame.OpenVideoEvent += OpenEmpty;
+            //YandexGame.CloseVideoEvent += CloseEmpty;
+            //YandexGame.ErrorVideoEvent += CloseEmpty;
+            //YandexGame.ErrorFullAdEvent += CloseEmpty;
         }
         
         private void OpenEmpty()
@@ -39,12 +37,12 @@ namespace Script.Gameplay.Services
 
         public void ShowFullScreenBanner()
         {
-            YandexGame.FullscreenShow();
+            //YandexGame.FullscreenShow();
         }
 
         public void ShowReward()
         {
-            YandexGame.RewVideoShow(0);
+            //YandexGame.RewVideoShow(0);
         }
 
         private void UserGotReward(int id_reward)

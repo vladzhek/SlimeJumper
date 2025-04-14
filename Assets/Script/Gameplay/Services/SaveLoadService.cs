@@ -1,7 +1,5 @@
-﻿using System;
-using Script.Gameplay.Progress;
+﻿using Script.Gameplay.Progress;
 using UnityEngine;
-using YG;
 
 namespace Script.Gameplay.Services
 {
@@ -20,12 +18,7 @@ namespace Script.Gameplay.Services
 #if UNITY_ANDROID
             PlayerPrefs.SetString(SavesKey, JsonUtility.ToJson(_progressService.PlayerProgress));
             Debug.Log("[Save] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
-#endif            
-#if UNITY_EDITOR || UNITY_WEBGL
-            //ResetData();
-            YandexGame.savesData.PlayerProgress = _progressService.PlayerProgress;
-            YandexGame.SaveProgress();
-#endif            
+#endif
         }
         
         public void LoadProgress()
@@ -33,11 +26,6 @@ namespace Script.Gameplay.Services
 #if UNITY_ANDROID
             Debug.Log("[Load2] \n" + JsonUtility.ToJson(_progressService.PlayerProgress));
             _progressService.InitializeProgress(GetOrCreate());
-#endif
-            
-#if UNITY_EDITOR || UNITY_WEBGL
-            YandexGame.LoadProgress();
-            _progressService.InitializeProgressYG();
 #endif
         }
         
@@ -50,11 +38,6 @@ namespace Script.Gameplay.Services
             }
             
             return new PlayerProgress();
-        }
-
-        private void ResetData()
-        {
-            YandexGame.savesData.PlayerProgress = new PlayerProgress();
         }
     }
 }

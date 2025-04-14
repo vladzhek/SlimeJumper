@@ -1,13 +1,8 @@
-using System;
 using Script.Gameplay;
 using Script.Gameplay.Data;
 using Script.Gameplay.Mono;
-using Script.Gameplay.Player;
-using Script.Gameplay.Progress;
 using Script.Gameplay.Services;
-using Script.Gameplay.View;
 using UnityEngine;
-using YG;
 using Zenject;
 
 public class SceneDataLoader : MonoBehaviour

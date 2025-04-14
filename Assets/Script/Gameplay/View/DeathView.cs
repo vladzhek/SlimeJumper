@@ -1,12 +1,10 @@
 ﻿using System;
 using Script.Gameplay.Data;
 using Script.Gameplay.Mono;
-using Script.Gameplay.Progress;
 using Script.Gameplay.Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using YG;
 using Zenject;
 
 namespace Script.Gameplay.View
@@ -44,16 +42,6 @@ namespace Script.Gameplay.View
             _bestScore.text = _progressService.PlayerProgress.BestScore.ToString();
             _score.text = _playerModel.TotalScore.ToString();
             _menuButton.onClick.AddListener(GoToMenu);
-
-            try
-            {
-                YandexGame.NewLeaderboardScores("SlimeJumperLB", _progressService.PlayerProgress.BestScore);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[DeathView/LeaderBoard] FAILED");
-                throw;
-            }
         }
         
         private void GoToMenu()
