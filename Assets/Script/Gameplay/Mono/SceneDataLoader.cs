@@ -1,3 +1,4 @@
+using GoogleMobileAds.Api;
 using Script.Gameplay;
 using Script.Gameplay.Data;
 using Script.Gameplay.Mono;
@@ -62,7 +63,9 @@ public class SceneDataLoader : MonoBehaviour
     //--- Enter game
     public void Awake()
     {
-        // Need First
+        //--- Need First ---
+        // GoogleADS
+        _adsService.Initialize();
         _staticDataService.Load();
         _saveLoadService.LoadProgress();
         _uiManager.Load();
@@ -73,13 +76,14 @@ public class SceneDataLoader : MonoBehaviour
         _spawnerModel.Initialize(_spawnPostion);
         _achievementModel.Initialize();
         _audioService.Initialize(_staticDataService, _sfx, _music);
-        _adsService.Initialize();
+        
         _shaderService.Initialize(_playerModel);
         Subscribe();
     }
     
     public void Start()
     {
+        _adsService.ShowBanner();
         _settingModel.Initialize();
         
         _uiManager.OpenWindow(WindowType.Menu);
@@ -105,7 +109,7 @@ public class SceneDataLoader : MonoBehaviour
         _playerModel.ReloadPlayer();
         _spawnerModel.ClearObstacle();
         _spawnerModel.SetSpawnStatus(false);
-        _adsService.ShowFullScreenBanner();
+        _adsService.ShowBanner();
         _shaderService.PauseDecorSpeed(true);
         _shaderService.ActivePlayerDeathAnim(false);
         _particleService.SpawnParticle(ParticleType.Respawn, _playerModel.PlayerControl.transform);
