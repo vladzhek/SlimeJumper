@@ -1,6 +1,4 @@
 ﻿using System;
-using Script.Gameplay.Mono;
-using UnityEditor;
 using UnityEngine;
 
 namespace Script.Gameplay.Data.Achievement

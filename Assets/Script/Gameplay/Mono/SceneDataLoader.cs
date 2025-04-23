@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using GoogleMobileAds.Api;
 using Script.Gameplay;
 using Script.Gameplay.Data;
@@ -101,6 +103,12 @@ public class SceneDataLoader : MonoBehaviour
 
     private void Death()
     {
+        StartCoroutine(Delay());
+    }
+
+    private IEnumerator Delay()
+    {
+        yield return new WaitForSeconds(0.8f);
         _uiManager.OpenWindow(WindowType.Death);
     }
 
