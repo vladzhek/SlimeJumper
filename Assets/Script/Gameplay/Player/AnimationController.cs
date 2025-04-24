@@ -36,9 +36,6 @@ namespace Script.Gameplay.Player
                 _value -= 0.1f;
                 _material.SetFloat(Fill, _value);
                 yield return null;
-                yield return null;
-                yield return null;
-                yield return null;
             }
         }
         

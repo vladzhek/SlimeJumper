@@ -12,8 +12,8 @@ namespace Script.Gameplay.Services
         private UIManager _uiManager;
 
 #if UNITY_ANDROID
-        private const string BannerUnitId = "ca-app-pub-3940256099942544/6300978111";
-        private const string RewardedUnitId = "ca-app-pub-3940256099942544/5224354917";
+        private const string BannerUnitId = "ca-app-pub-4084447808428710/9982874174";//"ca-app-pub-3940256099942544/6300978111";
+        private const string RewardedUnitId = "ca-app-pub-4084447808428710/3110785003";//"ca-app-pub-3940256099942544/5224354917";
 #else
         private const string BannerUnitId = "unused";
 #endif
@@ -38,7 +38,7 @@ namespace Script.Gameplay.Services
 
             DisposeBanner();
 
-            _bannerView = new BannerView(BannerUnitId, AdSize.SmartBanner, AdPosition.Top);
+            _bannerView = new BannerView(BannerUnitId, AdSize.Banner, AdPosition.Bottom);
 
             _bannerView.OnBannerAdLoaded += () =>
             {
